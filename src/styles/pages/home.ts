@@ -1,12 +1,12 @@
-import Link from "next/link";
-import { styled } from "../index";
+import Link from 'next/link'
+import { styled } from '../index'
 
 export const HomeContainer = styled('main', {
   display: 'flex',
   width: '100%',
   maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
   marginLeft: 'auto',
-  minHeight: 656
+  minHeight: 656,
 })
 
 export const Product = styled(Link, {
@@ -24,7 +24,7 @@ export const Product = styled(Link, {
   img: {
     objectFit: 'cover',
     width: 520,
-    height: "auto"
+    height: 'auto',
   },
 
   footer: {
@@ -33,7 +33,7 @@ export const Product = styled(Link, {
     left: '0.25rem',
     right: '0.25rem',
 
-    borderRadius: 6, 
+    borderRadius: 6,
     padding: '2rem',
 
     display: 'flex',
@@ -46,22 +46,49 @@ export const Product = styled(Link, {
     opacity: 0,
     transition: 'all 0.2s ease-in-out',
 
-    strong: {
-      fontSize: '$lg',
-      color: '$gray100'
+    div: {
+      display: 'flex',
+      flexDirection: 'column',
+
+      strong: {
+        fontSize: '$lg',
+        color: '$gray100',
+        lineHeight: 1.6,
+      },
+
+      span: {
+        fontSize: '$xl',
+        fontWeight: 'bold',
+        color: '$green300',
+        lineHeight: 1.6,
+      },
     },
 
-    span: {
-      fontSize: '$xl',
-      fontWeight: 'bold',
-      color: '$green300'
-    }
+    button: {
+      padding: '0.75rem',
+      border: 0,
+      borderRadius: 6,
+      cursor: 'pointer',
+
+      variants: {
+        color: {
+          active: '$gray100',
+        },
+        background: {
+          active: '$green500',
+        },
+      },
+
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
   },
 
   '&:hover': {
     footer: {
       transform: 'translateY(0%)',
-      opacity: 1 
-    }
-  }
+      opacity: 1,
+    },
+  },
 })
